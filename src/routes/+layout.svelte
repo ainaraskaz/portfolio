@@ -3,14 +3,20 @@
 	let { children } = $props();
 </script>
 
-<div class=" flex items-center justify-center">
-	<nav class=" w-8/12 rounded-2xl bg-gray-500 p-4 text-center text-xl font-bold text-blue-900">
-		<div class="items-center justify-center text-center">
-			<a class=" p-3" href="/">Namai namuciai </a>
-			<a class=" p-3" href="/about">Mentas kad klausineji APIE MANE</a>
-			<a class=" p-3" href="/projects">Dabar gerai pagalvok ar ktu studentas tures projektu</a>
-			<a class="p-3" href="/contec">tap in</a>
-		</div>
-	</nav>
+<div class="min-h-screen bg-black">
+	<div class=" flex items-center justify-center p-6">
+		<nav class=" w-auto rounded-2xl border-1 bg-black p-4 text-center text-xl font-bold text-white">
+			<div class="items-center justify-center text-center">
+				<a class="rounded-2xl border-0 p-3 hover:bg-gray-400" href="/">Namai namuciai </a>
+				<a class=" rounded-2xl border-0 p-3 hover:bg-gray-400" href="/about"
+					>Mentas kad klausineji APIE MANE</a
+				>
+				<a class=" rounded-2xl border-0 p-3 hover:bg-gray-400" href="/projects"
+					>Dabar gerai pagalvok ar ktu studentas tures PROJEKTU</a
+				>
+				<a class="rounded-2xl border-0 p-3 hover:bg-gray-400" href="/contact">tap in</a>
+			</div>
+		</nav>
+	</div>
 </div>
 {@render children()}
