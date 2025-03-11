@@ -89,6 +89,28 @@
 			</a>
 		</div>
 		<hr class="my-15 border-t border-white" />
+		<div class="flex items-center justify-center">
+			<div
+				class="inline-flex w-screen items-center justify-center rounded-2xl border-1 border-white bg-black"
+			>
+				<button
+					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-gray-800 py-1 text-2xl text-white transition-normal"
+					role="tab"
+					type="button"
+					aria-selected="true"
+				>
+					Experience
+				</button>
+				<button
+					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-gray-800 py-1 text-2xl text-white transition-normal"
+					role="tab"
+					type="button"
+					aria-selected="true"
+				>
+					Education
+				</button>
+			</div>
+		</div>
 	</div>
 </div>
 
