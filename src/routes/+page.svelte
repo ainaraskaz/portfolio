@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+	//state
+	let condition = true;
 </script>
 
 <svelte:head>
@@ -94,22 +96,31 @@
 				class="inline-flex w-screen items-center justify-center rounded-2xl border-1 border-white bg-black"
 			>
 				<button
-					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal"
+					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal hover:bg-gray-400"
 					role="tab"
 					type="button"
 					aria-selected="true"
-				>
-					Experience
+					value="Experience"
+					on:click={() => (condition = true)}
+					>Experience
 				</button>
 				<button
-					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal"
+					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal hover:bg-gray-400"
 					role="tab"
 					type="button"
 					aria-selected="true"
+					on:click={() => (condition = false)}
 				>
 					Education
 				</button>
 			</div>
+		</div>
+		<div class="rounded-2xl border-1 text-white">
+			{#if condition}
+				<p>this is supposed to be experience</p>
+			{:else}
+				<p>this is supposed to be education</p>
+			{/if}
 		</div>
 	</div>
 </div>
