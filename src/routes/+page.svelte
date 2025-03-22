@@ -96,16 +96,20 @@
 				class="inline-flex w-screen items-center justify-center rounded-2xl border-1 border-white bg-black"
 			>
 				<button
-					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal hover:bg-gray-400"
+					class="m-1 flex flex-1 items-center justify-center rounded-xl py-1 text-2xl text-white transition-normal {condition
+						? 'bg-gray-400'
+						: 'bg-black'}"
 					role="tab"
 					type="button"
 					aria-selected="true"
-					value="Experience"
+					disabled={condition}
 					on:click={() => (condition = true)}
 					>Experience
 				</button>
 				<button
-					class="m-1 flex flex-1 items-center justify-center rounded-xl bg-black py-1 text-2xl text-white transition-normal hover:bg-gray-400"
+					class="m-1 flex flex-1 items-center justify-center rounded-xl py-1 text-2xl text-white transition-normal {!condition
+						? 'bg-gray-400'
+						: 'bg-black'}"
 					role="tab"
 					type="button"
 					aria-selected="true"
@@ -115,12 +119,36 @@
 				</button>
 			</div>
 		</div>
-		<div class="rounded-2xl border-1 text-white">
-			{#if condition}
-				<p>this is supposed to be experience</p>
-			{:else}
-				<p>this is supposed to be education</p>
-			{/if}
+		<div class="mt-4 rounded-2xl border-1 py-4 text-xl text-white">
+			<div class="mx-10 list-none">
+				{#if condition}
+					<ul class="relative inline-flex border-l-2 border-white py-5">
+						<li>
+							<img
+								src="/jobless.jpg"
+								alt="job jpg"
+								class="absolute top-8 -left-8 h-15 w-15 justify-start rounded-full"
+							/>
+							<h1 class="relative ml-10">2004-present</h1>
+							<h1 class="relative ml-10 text-2xl">No experience yet :(</h1>
+							<h1 class="relative ml-10">sitting on the couch</h1>
+						</li>
+					</ul>
+				{:else}
+					<ul class="relative inline-flex border-l-2 border-white py-5">
+						<li>
+							<img
+								src="/ktu_ikona.png"
+								alt="job jpg"
+								class="absolute top-8 -left-8 h-15 w-15 justify-start rounded-full"
+							/>
+							<h1 class="relative ml-10">2023-2027</h1>
+							<h1 class="relative ml-10 text-2xl">Kaunas University of Technology</h1>
+							<h1 class="relative ml-10">Bachelor of program sistems</h1>
+						</li>
+					</ul>
+				{/if}
+			</div>
 		</div>
 	</div>
 </div>
