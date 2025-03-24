@@ -144,7 +144,7 @@
 							/>
 							<h1 class="relative ml-10">2023-2027</h1>
 							<h1 class="relative ml-10 text-2xl">Kaunas University of Technology</h1>
-							<h1 class="relative ml-10">Bachelor of program sistems</h1>
+							<h1 class="relative ml-10">Bachelor of program systems</h1>
 						</li>
 					</ul>
 				{/if}
